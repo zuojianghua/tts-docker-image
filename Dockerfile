@@ -1,5 +1,7 @@
 FROM nvcr.io/nvidia/pytorch:22.12-py3
 WORKDIR /workspace
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Shanghai
 USER root
 EXPOSE 8800
 RUN apt-get update && apt-get upgrade -y && apt-get install git -y
